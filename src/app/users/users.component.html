@@ -1,0 +1,19 @@
+<!-- {{ userData | json }} -->
+<a class="nav-link" routerLink="/adduser">Add user</a>
+<table class="table mt-3">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Username</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of userData">
+      <th scope="row"><a [routerLink]="['/user', user.id]">{{ user?.name }}</a></th>
+      <td>{{ user?.username }}</td>
+      <td>{{ user?.email }}</td>
+    </tr>
+
+  </tbody>
+</table>

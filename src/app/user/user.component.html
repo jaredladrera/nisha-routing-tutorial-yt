@@ -1,0 +1,33 @@
+<!-- {{ inUserData | json }} -->
+
+<div class="row mt-5">
+  <div class="col-md-12">
+    <table class="table table-bordered">
+      <tr>
+        <th>Username</th>
+        <td>{{ inUserData?.username }}</td>
+      </tr>
+      <tr>
+        <th>Name</th>
+        <td>{{ inUserData?.name }}</td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td>{{ inUserData?.email }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div>
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a routerLink="address" class="nav-link">Address</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="company" class="nav-link">Company</a>
+    </li>
+  </ul>
+
+  <router-outlet></router-outlet>
+</div>
